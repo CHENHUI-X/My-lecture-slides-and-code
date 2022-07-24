@@ -1,6 +1,6 @@
 # My-lecture-slides-and-code
 
-- ** 注意pdf不能预览,所以进入相应链接后,点击右上方download即可. **
+- ** 注意pdf不能预览,所以进入相应链接后,点击右上方download即可下载到本地查看. **
 - ** 随机森林课程数据是Python自带的iris数据集,直接使用下边的代码加载就可以. **
   - ```python
        from sklearn.datasets import load_iris
