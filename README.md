@@ -1,5 +1,6 @@
 # My-lecture-slides-and-code
-B站视频PPT和相关代码
+
+## 注意pdf不能预览,所以进入相应链接后,点击右上方download即可
 
 - 嗨~同学,你好呀。如果我的视频和PPT帮助到了你,可以点亮仓库Star来支持我哦!
 
