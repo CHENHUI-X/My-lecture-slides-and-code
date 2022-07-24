@@ -7,4 +7,4 @@ B站视频PPT和相关代码
 
 - Q群：1019030249（内含授课PPT以及其他资料,群暂满）
 
-- (https://space.bilibili.com/294132471)[我的B站主页]
+- [我的B站主页](https://space.bilibili.com/294132471)
