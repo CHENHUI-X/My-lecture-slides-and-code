@@ -1,14 +1,14 @@
 # My-lecture-slides-and-code
 
-- **注意课件PDF不能在网页预览,所以进入相应链接后,点击右上方download即可下载到本地查看.**
-- **随机森林课程数据是Python自带的iris数据集,直接使用下边的代码加载就可以.**
+- ** 注意课件PDF不能在网页预览,所以进入相应链接后,点击右上方download即可下载到本地查看. **
+- ** 随机森林课程数据是Python自带的iris数据集,直接使用下边的代码加载就可以. **
   -
     ```python
        from sklearn.datasets import load_iris
        X,y = load_iris(return_X_y=True)
        # X 就是特征, Y就是相应的类别
     ```
- - **代码在code文件夹**
+ - ** 代码在code文件夹. **
 - ----
 - 嗨~同学,你好呀。如果我的视频和PPT帮助到了你,可以点亮仓库Star来支持我,下次来就不会迷路辣!
 
