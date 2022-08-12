@@ -4,7 +4,6 @@
 - 
 - **随机森林课程数据是Python自带的iris数据集,直接使用下边的代码加载就可以.**
 - 
-  -
     ```python
        from sklearn.datasets import load_iris
        X,y = load_iris(return_X_y=True)
