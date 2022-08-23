@@ -1,4 +1,4 @@
-# My-lecture-slides-and-code
+# 请先阅读我.
 
 - **注意课件PDF不能在网页预览,所以进入相应链接后,点击右上方 `Download` 即可下载到本地查看.**
 
