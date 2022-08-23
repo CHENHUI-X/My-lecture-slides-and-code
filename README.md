@@ -6,7 +6,7 @@
 - 
     ```python
        from sklearn.datasets import load_iris
-       # 如果没有sklearn库,可以先在cmd输入 !pip install -U scikit-learn 进行安装
+       # 如果没有sklearn库,可以先在cmd输入 pip install -U scikit-learn  进行安装
        X,y = load_iris(return_X_y=True)
        # X 就是特征, Y就是相应的类别
     ```
