@@ -21,3 +21,5 @@
 - [我的B站主页](https://space.bilibili.com/294132471)
 
 - 此外的我的仓库还有其他好东西：从零开始实现Resnet、Attention等等，代码都添加了非常详细的注释，你可以随便逛逛哦~
+
+- `推荐一个便宜好用的鸡场:https://xmrth.vip/auth/register?code=LMxJ`
