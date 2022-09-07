@@ -1,3 +1,10 @@
+# Ads :
+
+- `推荐一个便宜好用的鸡场,只需5r,每月1.5T流量~:`[xmrth](https://xmrth.vip/auth/register?code=LMxJ)
+
+- `推荐另一个便宜好用的鸡场,只需1r,每月555G流量，支持免流~:`[1yuan](https://1yuan.live/auth/register?code=p5Uj)
+----
+
 # Tips :
 
 - **注意课件PDF不能在网页预览,所以进入相应链接后,点击右上方 `Download` 即可下载到本地查看.**
@@ -20,6 +27,4 @@
 
 - [我的B站主页](https://space.bilibili.com/294132471)
 
-- 此外的我的仓库还有其他好东西：从零开始实现Resnet、Attention等等，代码都添加了非常详细的注释，你可以随便逛逛哦~
-
-- `推荐一个便宜好用的鸡场,只需5r,每月1.5T流量~:`[xmrth](https://xmrth.vip/auth/register?code=LMxJ)
+- 此外的我的仓库还有其他好东西：从零开始实现Resnet、Attention等等，代码都添加了非常详细的注释，你可以随便逛
