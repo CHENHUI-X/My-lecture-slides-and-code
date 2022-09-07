@@ -5,8 +5,11 @@
 - `推荐另一个便宜好用的鸡场,只需1r,每月555G流量，支持免流~:`[1yuan](https://1yuan.live/auth/register?code=p5Uj)
 
 
+
 <div style="text-align: center">
-<img src="https://user-images.githubusercontent.com/55629321/188789221-8f7bc0ff-52aa-4965-b1ac-2194cb419dce.png"/> </div>
+<img src="https://user-images.githubusercontent.com/55629321/188789221-8f7bc0ff-52aa-4965-b1ac-2194cb419dce.png"/>
+</div>
+
 
 ----
 
