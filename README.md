@@ -19,10 +19,13 @@
 - **随机森林课程数据是Python自带的iris数据集,直接使用下边的代码加载就可以.**
 - 
     ```python
-       from sklearn.datasets import load_iris
+       from sklearn.datasets import load_iris 
        # 如果没有sklearn库,可以先在cmd输入 pip install -U scikit-learn  进行安装
+       import pandas as pd  
+       imoprt numpy as np
        X,y = load_iris(return_X_y=True)
        # X 就是特征, Y就是相应的类别
+       DATA = pd.DataFrame(np.concatenate((X,y.reshape(-1,1)),1))
     ```
 - **代码在code文件夹.**
  
