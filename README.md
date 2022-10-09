@@ -17,7 +17,7 @@
 - **注意课件PDF不能在网页预览,所以进入相应链接后,点击右上方 `Download` 即可下载到本地查看.**
     -  <div align="center">
         <img src="https://user-images.githubusercontent.com/55629321/194766450-5e162090-413e-4e9a-a53f-9e7f2d4c118c.png" height="250" width="400"/> </div><div align="center">
-        <img src="https://user-images.githubusercontent.com/55629321/194766712-a42bd060-8709-4059-8f48-c24c604b19db.png" height="250" width="400"/> </div>
+        <img src="https://user-images.githubusercontent.com/55629321/194766712-a42bd060-8709-4059-8f48-c24c604b19db.png" height="250" width="600"/> </div>
 
 
 - **随机森林课程数据是Python自带的iris数据集,直接使用下边的代码加载就可以.**
