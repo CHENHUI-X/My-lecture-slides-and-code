@@ -28,7 +28,8 @@
            imoprt numpy as np
            X,y = load_iris(return_X_y=True)
            # X 就是特征, Y就是相应的类别
-           DATA = pd.DataFrame(np.concatenate((X,y.reshape(-1,1)),1))```
+           DATA = pd.DataFrame(np.concatenate((X,y.reshape(-1,1)),1))
+           ```
 
  
 - ----
