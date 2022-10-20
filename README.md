@@ -1,7 +1,7 @@
-### 这是广告。
-- `推荐一个便宜好用的鸡场,只需5r,每月1.5T流量~:`[xmrth](https://xmrth.vip/auth/register?code=LMxJ)
+### 给大家推荐2个便宜好用的鸡场。可以选择适合你的使用.
+- `[1] 只需5r,每月1.5T流量~:`[xmrth](https://xmrth.vip/auth/register?code=LMxJ)
 
-- `推荐另一个便宜好用的鸡场,只需1r,每月555G流量，支持免流~:`[1yuan](https://1yuan.live/auth/register?code=p5Uj)
+- `[2] 只需1r,每月555G流量，支持免流~:`[1yuan](https://1yuan.live/auth/register?code=p5Uj)
  
 
 
