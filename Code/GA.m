@@ -16,9 +16,9 @@ pop= round( rand(popsize,chromlength) )  ; %随机产生初始群体
 decpop =  bintodec( pop ,popsize, chromlength,xlim ) ; % 计算初代解对应十进制
 fx = calobjvalue(decpop  ) ; % 计算初代解的函数值
 plotfig(decpop , fx , xlim , 1  ) ; % 绘制图像
-[y(1) , l ]  = min(fx); x(1) = decpop(l);
+[y(1) , l ]  = max(fx); x(1) = decpop(l);
 
-for i=2  : G 
+for i = 2  : G 
     decpop =  bintodec( pop , popsize, chromlength,xlim ) ; % 计算上一代解对应十进制
     fx = calobjvalue(decpop  ) ; % 计算上一代解的函数值
     fitvalue = calfitvalue(fx) ;  % 适应度映射
@@ -43,7 +43,7 @@ for i=2  : G
     subplot(1,2,2);
     plot(1:i,y); 
     title('适应度进化曲线');
-    i = i + 1 ;
+   
 end
 [ymax, max_index] = max(y);
 disp(['找的最优解位置为：', num2str(x(max_index)) ])
