@@ -1,72 +1,72 @@
-%%Ö÷³ÌĞò
+%%ä¸»ç¨‹åº
 function GA() 
 
 clear
 close all
-popsize=20; % ÈºÌå´óĞ¡
-chromlength=20; %´®µÄ³¤¶È£¨¸öÌå³¤¶È£©
-pc=0.6; %½»²æ¸ÅÂÊ
-pm=0.1; %±äÒì¸ÅÂÊ
+popsize=20; % ç¾¤ä½“å¤§å°
+chromlength=20; %ä¸²çš„é•¿åº¦ï¼ˆä¸ªä½“é•¿åº¦ï¼‰
+pc=0.6; %äº¤å‰æ¦‚ç‡
+pm=0.1; %å˜å¼‚æ¦‚ç‡
 xlim = [0,50];
-G = 100 ; %µü´ú´ÎÊı
-% x = zeros(1,G); % ¼ÇÂ¼Ã¿´ú¸öÌå×îÓÅÎ»ÖÃ 
-% y = zeros(1,G); % ¼ÇÂ¼Ã¿´ú×îÓÅ¸öÌå¶ÔÓ¦µÄº¯ÊıÖµ
+G = 100 ; %è¿­ä»£æ¬¡æ•°
+% x = zeros(1,G); % è®°å½•æ¯ä»£ä¸ªä½“æœ€ä¼˜ä½ç½® 
+% y = zeros(1,G); % è®°å½•æ¯ä»£æœ€ä¼˜ä¸ªä½“å¯¹åº”çš„å‡½æ•°å€¼
 
-pop= round( rand(popsize,chromlength) )  ; %Ëæ»ú²úÉú³õÊ¼ÈºÌå
-decpop =  bintodec( pop ,popsize, chromlength,xlim ) ; % ¼ÆËã³õ´ú½â¶ÔÓ¦Ê®½øÖÆ
-fx = calobjvalue(decpop  ) ; % ¼ÆËã³õ´ú½âµÄº¯ÊıÖµ
-plotfig(decpop , fx , xlim , 1  ) ; % »æÖÆÍ¼Ïñ
+pop= round( rand(popsize,chromlength) )  ; %éšæœºäº§ç”Ÿåˆå§‹ç¾¤ä½“
+decpop =  bintodec( pop ,popsize, chromlength,xlim ) ; % è®¡ç®—åˆä»£è§£å¯¹åº”åè¿›åˆ¶
+fx = calobjvalue(decpop  ) ; % è®¡ç®—åˆä»£è§£çš„å‡½æ•°å€¼
+plotfig(decpop , fx , xlim , 1  ) ; % ç»˜åˆ¶å›¾åƒ
 [y(1) , l ]  = max(fx); x(1) = decpop(l);
 
 for i = 2  : G 
-    decpop =  bintodec( pop , popsize, chromlength,xlim ) ; % ¼ÆËãÉÏÒ»´ú½â¶ÔÓ¦Ê®½øÖÆ
-    fx = calobjvalue(decpop  ) ; % ¼ÆËãÉÏÒ»´ú½âµÄº¯ÊıÖµ
-    fitvalue = calfitvalue(fx) ;  % ÊÊÓ¦¶ÈÓ³Éä
-    newpop = copyx(pop,fitvalue,popsize); %¸´ÖÆ
-    newpop = crossover(newpop, pc, popsize,chromlength ); %½»²æ
-    newpop = mutation(newpop,pm, popsize,chromlength); %±äÒì
-    % ÕâÊ±µÄnewpopÊÇ¾­¹ı¸´ÖÆ½»²æ±äÒì²úÉúµÄĞÂÒ»´úÈºÌå
-    %     ÏÂ±ß½øĞĞÑ¡ÔñÔñÓÅ±£Áô£¨¼´ÊµÏÖ±£µ×»úÖÆ£©
+    decpop =  bintodec( pop , popsize, chromlength,xlim ) ; % è®¡ç®—ä¸Šä¸€ä»£è§£å¯¹åº”åè¿›åˆ¶
+    fx = calobjvalue(decpop  ) ; % è®¡ç®—ä¸Šä¸€ä»£è§£çš„å‡½æ•°å€¼
+    fitvalue = calfitvalue(fx) ;  % é€‚åº”åº¦æ˜ å°„
+    newpop = copyx(pop,fitvalue,popsize); %å¤åˆ¶
+    newpop = crossover(newpop, pc, popsize,chromlength ); %äº¤å‰
+    newpop = mutation(newpop,pm, popsize,chromlength); %å˜å¼‚
+    % è¿™æ—¶çš„newpopæ˜¯ç»è¿‡å¤åˆ¶äº¤å‰å˜å¼‚äº§ç”Ÿçš„æ–°ä¸€ä»£ç¾¤ä½“
+    %     ä¸‹è¾¹è¿›è¡Œé€‰æ‹©æ‹©ä¼˜ä¿ç•™ï¼ˆå³å®ç°ä¿åº•æœºåˆ¶ï¼‰
     newdecpop =  bintodec( newpop ,popsize, chromlength,xlim ) ;
-    new_fx = calobjvalue(newdecpop) ; %¼ÆËãĞÂ½âÄ¿±êº¯Êı
-    new_fitvalue = calfitvalue(new_fx); %¼ÆËãĞÂÈºÌåÖĞÃ¿¸ö¸öÌåµÄÊÊÓ¦¶È
+    new_fx = calobjvalue(newdecpop) ; %è®¡ç®—æ–°è§£ç›®æ ‡å‡½æ•°
+    new_fitvalue = calfitvalue(new_fx); %è®¡ç®—æ–°ç¾¤ä½“ä¸­æ¯ä¸ªä¸ªä½“çš„é€‚åº”åº¦
     index = find(new_fitvalue > fitvalue) ; 
     
-    pop(index, : ) = newpop(index,:) ; % ¸üĞÂµÃµ½×îĞÂ½â
-    decpop = bintodec( pop ,popsize, chromlength,xlim ) ; %¼ÆËãĞÂ½âµÄÊ®½øÖÆ
-    fx = calobjvalue( decpop )  ; %¼ÆËã½á¹û
-    plotfig(decpop , fx ,xlim , i ) % »æÖÆĞÂ½âµÄÍ¼
-    % ÕÒ³ö¸üĞÂºóµÄ¸öÌå×îÓÅº¯ÊıÖµ
+    pop(index, : ) = newpop(index,:) ; % æ›´æ–°å¾—åˆ°æœ€æ–°è§£
+    decpop = bintodec( pop ,popsize, chromlength,xlim ) ; %è®¡ç®—æ–°è§£çš„åè¿›åˆ¶
+    fx = calobjvalue( decpop )  ; %è®¡ç®—ç»“æœ
+    plotfig(decpop , fx ,xlim , i ) % ç»˜åˆ¶æ–°è§£çš„å›¾
+    % æ‰¾å‡ºæ›´æ–°åçš„ä¸ªä½“æœ€ä¼˜å‡½æ•°å€¼
     [bestindividual,bestindex] = max(  fx ) ;
-    y(i)=bestindividual; % ¼ÇÂ¼Ã¿Ò»´úµÄ×îÓÅº¯ÊıÖµ
-    x(i)= decpop(bestindex) ; %Ê®½øÖÆ½â
+    y(i)=bestindividual; % è®°å½•æ¯ä¸€ä»£çš„æœ€ä¼˜å‡½æ•°å€¼
+    x(i)= decpop(bestindex) ; %åè¿›åˆ¶è§£
     subplot(1,2,2);
     plot(1:i,y); 
-    title('ÊÊÓ¦¶È½ø»¯ÇúÏß');
+    title('é€‚åº”åº¦è¿›åŒ–æ›²çº¿');
    
 end
 [ymax, max_index] = max(y);
-disp(['ÕÒµÄ×îÓÅ½âÎ»ÖÃÎª£º', num2str(x(max_index)) ])
-disp(['¶ÔÓ¦×îÓÅ½âÎª£º', num2str(ymax) ])
+disp(['æ‰¾çš„æœ€ä¼˜è§£ä½ç½®ä¸ºï¼š', num2str(x(max_index)) ])
+disp(['å¯¹åº”æœ€ä¼˜è§£ä¸ºï¼š', num2str(ymax) ])
 
 end
 
 %******************************************************************************************%
-%% ¼ÆËãÊÊÓ¦¶È
+%% è®¡ç®—é€‚åº”åº¦
 function fitvalue = calfitvalue(fx)
-%ÕâÀïÇó×î´óÖµ£¬²¢ÇÒº¯ÊıÖµÓÖ¶¼´óÓÚ0£¬ËùÒÔÖ±½ÓÊ¹ÓÃº¯ÊıÖµ±¾Éí×÷ÎªÊÊÓ¦¶ÈÖµ¡£
-% ÊÂÊµÉÏ£¬²»Í¬µÄÎÊÌâÊÊÓ¦¶Èº¯Êı¹¹Ôì·½·¨¶àÖÖ¶àÑù¡£
+%è¿™é‡Œæ±‚æœ€å¤§å€¼ï¼Œå¹¶ä¸”å‡½æ•°å€¼åˆéƒ½å¤§äº0ï¼Œæ‰€ä»¥ç›´æ¥ä½¿ç”¨å‡½æ•°å€¼æœ¬èº«ä½œä¸ºé€‚åº”åº¦å€¼ã€‚
+% äº‹å®ä¸Šï¼Œä¸åŒçš„é—®é¢˜é€‚åº”åº¦å‡½æ•°æ„é€ æ–¹æ³•å¤šç§å¤šæ ·ã€‚
     fitvalue = fx ; 
 end
 
-%% ¸´ÖÆ²Ù×÷
-function newx = copyx(pop, fitvalue,popsize ) %´«½øÀ´¶ş½øÖÆ´®ºÍ¶ÔÓ¦ÊÊÓ¦¶È
-% °´ÕÕPPTµÄÂÖÅÌ¶Ä²ßÂÔ¶Ô¸öÌå¸´ÖÆ
-    newx = pop; %Ö»ÊÇÆğµ½ÉêÇëÒ»¸ösizeÎªpop´óĞ¡¿Õ¼äµÄ×÷ÓÃ£¬newxÖ®ºóÒª¸üĞÂµÄ
+%% å¤åˆ¶æ“ä½œ
+function newx = copyx(pop, fitvalue,popsize ) %ä¼ è¿›æ¥äºŒè¿›åˆ¶ä¸²å’Œå¯¹åº”é€‚åº”åº¦
+% æŒ‰ç…§PPTçš„è½®ç›˜èµŒç­–ç•¥å¯¹ä¸ªä½“å¤åˆ¶
+    newx = pop; %åªæ˜¯èµ·åˆ°ç”³è¯·ä¸€ä¸ªsizeä¸ºpopå¤§å°ç©ºé—´çš„ä½œç”¨ï¼Œnewxä¹‹åè¦æ›´æ–°çš„
     i = 1;  j = 1;
     p = fitvalue / sum(fitvalue) ; 
     Cs = cumsum(p) ; 
-    R = sort(rand(popsize,1)) ; %Ã¿¸ö¸öÌåµÄ¸´ÖÆ¸ÅÂÊ
+    R = sort(rand(popsize,1)) ; %æ¯ä¸ªä¸ªä½“çš„å¤åˆ¶æ¦‚ç‡
     while j <= popsize 
         if R(j) < Cs(i)
             newx(j,:) = pop(i,:) ;
@@ -77,28 +77,28 @@ function newx = copyx(pop, fitvalue,popsize ) %´«½øÀ´¶ş½øÖÆ´®ºÍ¶ÔÓ¦ÊÊÓ¦¶È
     end
 end
 
-%% ½»²æ²Ù×÷
+%% äº¤å‰æ“ä½œ
 function newx = crossover(pop, pc, popsize,chromlength )
-% 12 34 56½»²æ·½Ê½£¬Ëæ»úÑ¡Ôñ½»²æÎ»µã
-% ×¢Òâ¸öÌåÊıÎªÆæÊıÅ¼ÊıµÄÇø±ğ
+% 12 34 56äº¤å‰æ–¹å¼ï¼Œéšæœºé€‰æ‹©äº¤å‰ä½ç‚¹
+% æ³¨æ„ä¸ªä½“æ•°ä¸ºå¥‡æ•°å¶æ•°çš„åŒºåˆ«
 i = 2 ;
-newx = pop ; %ÉêÇë¿Õ¼ä
+newx = pop ; %ç”³è¯·ç©ºé—´
 while i + 2 <= popsize
-    %½«µÚi Óë µÚ i -1 ½øĞĞËæ»úÎ»µã½»²æ
+    %å°†ç¬¬i ä¸ ç¬¬ i -1 è¿›è¡Œéšæœºä½ç‚¹äº¤å‰
     if rand < pc
         x1 = pop(i-1,:);
         x2 = pop(i,:) ; 
-        r = randperm( chromlength , 2 ) ; %·µ»Ø·¶Î§ÄÚÁ½¸öÕûÊı
-        r1 = min(r); r2 =max(r) ; % ½»²æ¸´ÖÆµÄÎ»µã
+        r = randperm( chromlength , 2 ) ; %è¿”å›èŒƒå›´å†…ä¸¤ä¸ªæ•´æ•°
+        r1 = min(r); r2 =max(r) ; % äº¤å‰å¤åˆ¶çš„ä½ç‚¹
         newx(i-1,:) = [x1( 1 : r1-1),x2(r1:r2) , x1(r2+1: end)];
         newx(i , : ) = [x2( 1 : r1-1),x1(r1:r2) , x2(r2+1: end)];
     end
-    i = i + 2 ; %¸üĞÂi
+    i = i + 2 ; %æ›´æ–°i
 end
 
 end
 
-%% ±äÒì
+%% å˜å¼‚
 function newx = mutation(pop,pm, popsize,chromlength)
 i = 1 ;
 while i <= popsize
@@ -109,13 +109,13 @@ while i <= popsize
     i = i + 1;
 end
 
-newx = pop; %½«±äÒìºóµÄ½á¹û·µ»Ø¡£
+newx = pop; %å°†å˜å¼‚åçš„ç»“æœè¿”å›ã€‚
 
 end
 
-%%  ¶ş½øÖÆ×ªÊ®½øÖÆº¯Êı
+%%  äºŒè¿›åˆ¶è½¬åè¿›åˆ¶å‡½æ•°
 function dec = bintodec( pop ,popsize, chromlength,xlim )
-    dec = zeros(1,chromlength);
+    dec = zeros(1,popsize);
     index = chromlength-1:-1:0;
     for i = 1 : popsize
         dec(i) = sum(pop(i,:).* (2.^index));
@@ -124,22 +124,22 @@ function dec = bintodec( pop ,popsize, chromlength,xlim )
 end
 
 
-%%  »æÖÆÍ¼Ïñ
+%%  ç»˜åˆ¶å›¾åƒ
 function plotfig(decpop , fx ,xlim,k) 
-    f = @(x) abs(x .* sin(x) .* cos(2 * x) - 2 * x .* sin(3 * x) +3 * x .* sin(4 * x)); % ÑĞ¾¿¶ÔÏóº¯Êı  
+    f = @(x) abs(x .* sin(x) .* cos(2 * x) - 2 * x .* sin(3 * x) +3 * x .* sin(4 * x)); % ç ”ç©¶å¯¹è±¡å‡½æ•°  
     x = xlim(1):0.05:xlim(2);
     y = f(x) ; 
     subplot(1,2,1);
     plot(x,y,decpop,fx,'o')
-    title(['µÚ',num2str(k),'´Îµü´ú½ø»¯'])
+    title(['ç¬¬',num2str(k),'æ¬¡è¿­ä»£è¿›åŒ–'])
     pause(0.2)
 end
 
 
-%% Ä¿±êº¯Êı
-function fx = calobjvalue(decpop ) %²ÎÊıÎªÊ®½øÖÆ½â
+%% ç›®æ ‡å‡½æ•°
+function fx = calobjvalue(decpop ) %å‚æ•°ä¸ºåè¿›åˆ¶è§£
 
-f = @(x) abs(x .* sin(x) .* cos(2 * x) - 2 * x .* sin(3 * x) +3 * x .* sin(4 * x)) ; % ÑĞ¾¿¶ÔÏóº¯Êı        
+f = @(x) abs(x .* sin(x) .* cos(2 * x) - 2 * x .* sin(3 * x) +3 * x .* sin(4 * x)) ; % ç ”ç©¶å¯¹è±¡å‡½æ•°        
 fx = f(decpop);
 end
 
