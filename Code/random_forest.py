@@ -1,4 +1,4 @@
-'''
+"""
 
 1  anaconda ( Comes with Python )
 2  Python + pycharm
@@ -21,7 +21,7 @@
     模型预测
 
 
-'''
+"""
 
 #***********************************读取数据********************************
 
@@ -57,7 +57,7 @@ print(DATA.describe()) # 简单的描述性分析
 
 
 #***********************************数据预处理 ********************************
-'''
+"""
 
 1 缺失值处理 :
         填充 : 均值填充 中位数 等
@@ -175,7 +175,7 @@ stdScale = StandardScaler().fit(x_train) ## 生成规则
 x_train = stdScale.transform(x_train) ## 将规则应用于训练集
 x_test = stdScale.transform(x_test) ## 将规则应用于验证集 :( 验证集 - 训练集均值) / 训练集方差
 
-'''
+"""
 
 #***********************************模型建立与预测--classification  ********************************
 
@@ -262,7 +262,7 @@ pre =  rfc.predict(np.array(Test_set).reshape(1,-1)) #预测
 
 # *****************************summary - classification *********************
 # 几个参数的解释
-'''
+"""
 
 n_estimators=100, # 随机森林 用到 ,树的个数 
 random_state = 0, # 随机数种子
@@ -273,7 +273,7 @@ min_impurity_decrease = 0.1, # 防止过拟合,设置"不纯度"分裂阈值
 oob_score = True # 袋外数据:
 当且仅当用在random forest中,用没选中的数据做一个简单验证
 
-'''
+"""
 
 
 
